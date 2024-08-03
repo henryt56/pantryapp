@@ -85,7 +85,7 @@ const PantryTracker = () => {
   };
 
   const handleEditSave = async () => {
-    await updateDoc(doc(db, 'pantry', editItem.name.charAt(0).toUpperCase() + editItemname.slice(1)), {
+    await updateDoc(doc(db, 'pantry', editItem.name.charAt(0).toUpperCase() + editItem.name.slice(1)), {
       count: editCount
     });
     setOpenDialog(false);
